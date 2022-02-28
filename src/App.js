@@ -1,10 +1,12 @@
 import "./App.css";
-import FormInput from "./components/FormInput";
+import Home from "./components/Home";
 function App() {
     return (
         <div className="App">
-            Typing Test <b>Beta</b>
-            <FormInput />
+            <h2>
+                Typing Test <b>Beta</b>
+            </h2>
+            <Home />
         </div>
     );
 }
