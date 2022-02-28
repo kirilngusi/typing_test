@@ -1,4 +1,5 @@
 {
+  "homepage": "https://kirilngusi.github.io/typing_test/",
   "name": "typing_test",
   "version": "0.1.0",
   "private": true,
@@ -12,6 +13,8 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -36,6 +39,7 @@
     ]
   },
   "devDependencies": {
-    "@faker-js/faker": "^6.0.0-alpha.7"
+    "@faker-js/faker": "^6.0.0-alpha.7",
+    "gh-pages": "^3.2.3"
   }
 }
