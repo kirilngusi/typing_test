@@ -1,14 +1,18 @@
 import React, { useState, useContext, useEffect } from "react";
-import { Context } from "../context/Context.js";
+// import { Context } from "../context/Context.js";
+import { generate } from "../data/WordGenerator";
 
 const Home = () => {
-    const { text } = useContext(Context);
+    // const { word } = useContext(Context);
+
+    //render word
+    const word = generate();
 
     const [input, setInput] = useState("");
     const [correct, setCorrect] = useState(true);
 
-    const [currentChar, setCurrentChar] = useState(text.charAt(0));
-    const [incomingChars, setIncomingChars] = useState(text.substring(1));
+    const [currentChar, setCurrentChar] = useState(word.charAt(0));
+    const [incomingChars, setIncomingChars] = useState(word.substring(1));
     const [outgoingChars, setOutgoingChars] = useState("");
 
     const [accuracy, setAccuracy] = useState("0");
@@ -38,7 +42,7 @@ const Home = () => {
 
             if (updatedIncomingChars.split(" ").length < 10) {
                 //render text
-                updatedIncomingChars += " " + text;
+                updatedIncomingChars += " " + word;
             }
 
             //set next char
